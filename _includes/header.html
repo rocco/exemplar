@@ -23,24 +23,13 @@
                 <noscript><img src="{% include avatar_url %}?s=54" alt="avatar"></noscript>
             </div>
         </div>
-        <h5 class="logo"><a href="http://tybenz.com">Tyler Benziger</a></h5>
+        <h5 class="logo"><a href="{{ site.url }}">Some Title</a></h5>
         <nav class="main">
             <ul>
-                {% if page.nav == "blog" %}
-                    <li><a href="http://tybenz.com" class="active">Blog</a></li>
-                {% else %}
-                    <li><a href="http://tybenz.com">Blog</a></li>
-                {% endif %}
-                {% if page.nav == "about" %}
-                <li><a href="http://tybenz.com/about" class="active">About</a></li>
-                {% else %}
-                <li><a href="http://tybenz.com/about">About</a></li>
-                {% endif %}
-                {% if page.nav == "projects" %}
-                <li><a href="http://tybenz.com/projects" class="active">Projects</a></li>
-                {% else %}
-                <li><a href="http://tybenz.com/projects">Projects</a></li>
-                {% endif %}
+                <li><a href="{{ site.url }}"{% if page.nav == "" %} class="active"{% endif %}>Home</a></li>
+                <li><a href="{{ site.url }}/about"{% if page.nav == "about" %} class="active"{% endif %}>About</a></li>
+                <li><a href="{{ site.url }}/projects"{% if page.nav == "projects" %} class="active"{% endif %}>Projects</a></li>
+                <li><a href="{{ site.url }}/blog"{% if page.nav == "blog" %} class="active"{% endif %}>Blog</a></li>
             </ul>
         </nav>
         <div class="nav-slider">
