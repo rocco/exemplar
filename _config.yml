@@ -3,3 +3,4 @@ permalink: /:title
 exclude: ['Gemfile','Gemfile.lock','Rakefile','.git']
 paginate: 3
 url: http://0.0.0.0:4000
+titleadd: ' | Some Title Addition'
